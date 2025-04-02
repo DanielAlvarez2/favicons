@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "cd server && node server.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "start": "cd server && node server.js",
     "express": "^5.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
