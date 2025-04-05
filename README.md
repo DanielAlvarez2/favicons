@@ -1,12 +1,49 @@
-# React + Vite
+# Favicons 
+[YouTube: Colby Fayock | Favicons the right way](https://www.youtube.com/watch?v=SAnLQABTF5A)  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+$ npm create vite@latest .
+Choose: React  
+Choose: JavaScript  
+$ npm i  
+$ npm run dev  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create a favicon image with 500px X 500px resolution  
+If creating an image in html,  
+make sure to use CSS reset:  
+  
+*{  
+    margin:0;  
+    padding:0;  
+    box-sizing:border-box;  
+}  
 
-## Expanding the ESLint configuration
+Save image file as a .PNG file  
+Go to: remove.bg  
+Remove background  
+Download Free (max 500x500)  
+Save to /public directory  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+go to: realfavicongenerator.net  
+Favicon Path: leave blank  
+Click Button "Download"  
+Download into /public directory  
+Extract .zip file  
+Move all files from /favicon to /public  
+Delete /favicon folder  
+Delete favicon.zip  
+Delete vite.svg  
+Copy 5 <link rel=""> 1 <meta>  
+Go to index.html and replace the <link rel="icon"> line  
+
+In App.jsx delete:  
+import viteLogo from '/vite.svg'  
+  
+<a href="https://vite.dev" target="_blank">  
+    <img src={viteLogo} className="logo" alt="Vite logo" />  
+</a>  
+
+Possibly might need to: Safari > Develop > Empty Caches  
+or also restart React server  
+
+
